@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://h7rjd3xlp43b"]
+[gd_scene load_steps=5 format=4 uid="uid://h7rjd3xlp43b"]
 
-[sub_resource type="TileSet" id="TileSet_ij1v8"]
+[ext_resource type="TileSet" uid="uid://cciktl4fqcro2" path="res://data/maps/tileset.tres" id="1_errlg"]
+[ext_resource type="Script" uid="uid://bchjd34pw2q1l" path="res://scripts/player.gd" id="2_iyx0m"]
+[ext_resource type="SpriteFrames" uid="uid://biu4q7twel5qj" path="res://data/images/animations/player.tres" id="3_74lek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5jx5"]
+size = Vector2(9, 18)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = SubResource("TileSet_ij1v8")
+tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAAD+/wIAAAAAAAEAAAD+/wMAAAAAAAIAAAD//wEAAAABAAAAAAD//wIAAAABAAEAAAD//wMAAAABAAIAAAAAAAEAAAACAAAAAAAAAAIAAAACAAEAAAAAAAMAAAACAAIAAAABAAEAAAADAAAAAAABAAIAAAADAAEAAAABAAMAAAADAAIAAAACAAIAAAAEAAEAAAACAAMAAAAEAAIAAAADAAEAAAAFAAAAAAADAAIAAAAFAAEAAAADAAMAAAAFAAIAAAAEAAEAAAAGAAAAAAAEAAIAAAAGAAEAAAAEAAMAAAAGAAIAAAAFAAEAAAAHAAAAAAAFAAIAAAAHAAEAAAAFAAMAAAAHAAIAAAAGAAEAAAAIAAAAAAAGAAIAAAAIAAEAAAAGAAMAAAAIAAIAAAAHAAIAAAAJAAEAAAAHAAMAAAAJAAIAAAA=")
+tile_set = ExtResource("1_errlg")
+
+[node name="player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_iyx0m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+sprite_frames = ExtResource("3_74lek")
+animation = &"idle_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_j5jx5")
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(3.5, 3.5)
