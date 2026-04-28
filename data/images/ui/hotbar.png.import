@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dafj87qke3yxj"
-path="res://.godot/imported/right.png-4e1fa05c69f6a22a06341f91123fc4d8.ctex"
+uid="uid://ces7k4rnrku66"
+path="res://.godot/imported/hotbar.png-3752793fb52b71e6b16baa5ce4aa4e44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/animations/player_run/right.png"
-dest_files=["res://.godot/imported/right.png-4e1fa05c69f6a22a06341f91123fc4d8.ctex"]
+source_file="res://data/images/ui/hotbar.png"
+dest_files=["res://.godot/imported/hotbar.png-3752793fb52b71e6b16baa5ce4aa4e44.ctex"]
 
 [params]
 
