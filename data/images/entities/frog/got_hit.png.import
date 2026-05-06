@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ueyk0e22b1dd"
-path="res://.godot/imported/player.png-fc5fc83d2cc1d7e94434486aefab7484.ctex"
+uid="uid://llwc7p438avy"
+path="res://.godot/imported/got_hit.png-bb3ae0ca3b570a92541467f0b48811df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/player.png"
-dest_files=["res://.godot/imported/player.png-fc5fc83d2cc1d7e94434486aefab7484.ctex"]
+source_file="res://data/images/entities/frog/got_hit.png"
+dest_files=["res://.godot/imported/got_hit.png-bb3ae0ca3b570a92541467f0b48811df.ctex"]
 
 [params]
 

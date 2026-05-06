@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://cciktl4fqcro2" path="res://data/maps/tileset.tres" id="1_errlg"]
 [ext_resource type="Script" uid="uid://bchjd34pw2q1l" path="res://scripts/player.gd" id="2_iyx0m"]
-[ext_resource type="SpriteFrames" uid="uid://biu4q7twel5qj" path="res://data/images/animations/player.tres" id="3_74lek"]
+[ext_resource type="SpriteFrames" uid="uid://biagqk3w3mcpx" path="res://data/images/entities/player/player.tres" id="3_74lek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5jx5"]
 size = Vector2(9, 18)

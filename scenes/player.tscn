@@ -1,22 +1,79 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvws4qw2qtmfy"]
+[gd_scene load_steps=8 format=3 uid="uid://cvws4qw2qtmfy"]
 
 [ext_resource type="Script" uid="uid://bchjd34pw2q1l" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="SpriteFrames" uid="uid://biu4q7twel5qj" path="res://data/images/animations/player.tres" id="2_qhqgy"]
+[ext_resource type="SpriteFrames" uid="uid://biagqk3w3mcpx" path="res://data/images/entities/player/player.tres" id="2_g2els"]
+[ext_resource type="Script" uid="uid://c6rihat0d5fi4" path="res://scripts/camera.gd" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(9, 18)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
+size = Vector2(28, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(31, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
+size = Vector2(33, 24)
+
 [node name="player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 10
-sprite_frames = ExtResource("2_qhqgy")
-animation = &"idle_back"
+sprite_frames = ExtResource("2_g2els")
+animation = &"idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_dqkch")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="camera" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
+script = ExtResource("3_qhqgy")
+
+[node name="hitbox_left" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="hitbox_left" type="CollisionShape2D" parent="hitbox_left"]
+visible = false
+position = Vector2(-5, 3)
+shape = SubResource("RectangleShape2D_qhqgy")
+debug_color = Color(0.94972724, 1.8289685e-06, 0.5744683, 0.41960785)
+
+[node name="hitbox_right" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="hitbox_right" type="CollisionShape2D" parent="hitbox_right"]
+visible = false
+visibility_layer = 513
+position = Vector2(3, 3.5)
+shape = SubResource("RectangleShape2D_qhqgy")
+debug_color = Color(0.6040084, 0.54214007, 0, 0.41960785)
+
+[node name="hitbox_down" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="hitbox_down" type="CollisionShape2D" parent="hitbox_down"]
+visible = false
+position = Vector2(-0.5, 8)
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="hitbox_up" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="hitbox_up" type="CollisionShape2D" parent="hitbox_up"]
+visible = false
+position = Vector2(-2.5, -9)
+shape = SubResource("RectangleShape2D_qlg0r")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="hitbox_left" to="." method="on_hitbox_left_body_entered"]
+[connection signal="body_entered" from="hitbox_right" to="." method="on_hitbox_right_body_entered"]
+[connection signal="body_entered" from="hitbox_down" to="." method="on_hitbox_down_body_entered"]
+[connection signal="body_entered" from="hitbox_up" to="." method="on_hitbox_up_body_entered"]
