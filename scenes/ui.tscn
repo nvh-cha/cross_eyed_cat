@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=3 uid="uid://cd7pmvc4ri3xo"]
+[gd_scene load_steps=151 format=3 uid="uid://cd7pmvc4ri3xo"]
 
 [ext_resource type="Script" uid="uid://ccs5m1ledjsyv" path="res://scripts/ui/ui.gd" id="1_ktti3"]
 [ext_resource type="Texture2D" uid="uid://c4ms8hpf540dl" path="res://data/images/ui/hud.png" id="1_nt7q6"]
@@ -1000,6 +1000,26 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="Animation" id="Animation_vdcm2"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6rmj2"]
+_data = {
+&"death": SubResource("Animation_vdcm2")
+}
+
 [node name="ui" type="CanvasLayer"]
 scale = Vector2(4, 4)
 transform = Transform2D(4, 0, 0, 4, 0, 0)
@@ -1047,5 +1067,17 @@ position = Vector2(144.00002, 81.00001)
 scale = Vector2(1, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_c3lix")
 animation = &"spawn"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6rmj2")
+}
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(7.3354316, 4.2258935)
+color = Color(0.0627451, 0.07058824, 0.10980392, 1)
 
 [connection signal="animation_finished" from="load_scene" to="." method="on_load_scene_finished"]

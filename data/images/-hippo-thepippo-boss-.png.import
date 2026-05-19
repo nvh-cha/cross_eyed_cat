@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv68ui8obyotd"
-path="res://.godot/imported/run_left.png-b7026c2824b718b71bd168f6bcc69c4e.ctex"
+uid="uid://fuvoaubfdims"
+path="res://.godot/imported/-hippo-thepippo-boss-.png-44c3df0e44f0ca5b5b8a5af888efea0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/entities/player/run_left.png"
-dest_files=["res://.godot/imported/run_left.png-b7026c2824b718b71bd168f6bcc69c4e.ctex"]
+source_file="res://data/images/-hippo-thepippo-boss-.png"
+dest_files=["res://.godot/imported/-hippo-thepippo-boss-.png-44c3df0e44f0ca5b5b8a5af888efea0d.ctex"]
 
 [params]
 

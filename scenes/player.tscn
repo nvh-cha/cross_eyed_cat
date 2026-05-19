@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cvws4qw2qtmfy"]
 
 [ext_resource type="Script" uid="uid://bchjd34pw2q1l" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="SpriteFrames" uid="uid://biagqk3w3mcpx" path="res://data/images/entities/player/player.tres" id="2_g2els"]
+[ext_resource type="SpriteFrames" uid="uid://biagqk3w3mcpx" path="res://data/images/entities/legacy/player/player.tres" id="2_g2els"]
 [ext_resource type="Script" uid="uid://c6rihat0d5fi4" path="res://scripts/camera.gd" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
@@ -17,13 +17,14 @@ size = Vector2(31, 14)
 size = Vector2(33, 24)
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 10
+[node name="animator" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = ExtResource("2_g2els")
-animation = &"idle_front"
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, -1)
@@ -72,7 +73,7 @@ visible = false
 position = Vector2(-2.5, -9)
 shape = SubResource("RectangleShape2D_qlg0r")
 
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="animator" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="hitbox_left" to="." method="on_hitbox_left_body_entered"]
 [connection signal="body_entered" from="hitbox_right" to="." method="on_hitbox_right_body_entered"]
 [connection signal="body_entered" from="hitbox_down" to="." method="on_hitbox_down_body_entered"]

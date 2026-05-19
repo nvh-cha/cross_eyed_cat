@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvv26iss54dni"
-path="res://.godot/imported/idle_back.png-7f39a70b23335bb642f649440317bc20.ctex"
+uid="uid://bmksmeculpa25"
+path="res://.godot/imported/teleport.png-f861f507138d8b2b5eb2c51c76c5fed3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/entities/player/idle_back.png"
-dest_files=["res://.godot/imported/idle_back.png-7f39a70b23335bb642f649440317bc20.ctex"]
+source_file="res://data/images/teleport.png"
+dest_files=["res://.godot/imported/teleport.png-f861f507138d8b2b5eb2c51c76c5fed3.ctex"]
 
 [params]
 

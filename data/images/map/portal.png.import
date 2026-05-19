@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cemtpa81ep3uf"
-path="res://.godot/imported/right.png-84fe67a82f9af9957b2ca39f550547c9.ctex"
+uid="uid://dclcntsxwuy35"
+path="res://.godot/imported/portal.png-27cf40806d62c657212f94c927231074.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/animations/player_idle/right.png"
-dest_files=["res://.godot/imported/right.png-84fe67a82f9af9957b2ca39f550547c9.ctex"]
+source_file="res://data/images/map/portal.png"
+dest_files=["res://.godot/imported/portal.png-27cf40806d62c657212f94c927231074.ctex"]
 
 [params]
 

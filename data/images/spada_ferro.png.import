@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8x50ees0igpk"
-path="res://.godot/imported/idle.png-b896a1ecaa928b46b1e3e326fec7ba51.ctex"
+uid="uid://c46am0di00jqj"
+path="res://.godot/imported/spada_ferro.png-79fad920da1621cf3df72147e7ff0805.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/entities/frog/idle.png"
-dest_files=["res://.godot/imported/idle.png-b896a1ecaa928b46b1e3e326fec7ba51.ctex"]
+source_file="res://data/images/spada_ferro.png"
+dest_files=["res://.godot/imported/spada_ferro.png-79fad920da1621cf3df72147e7ff0805.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duatvyjp5t47x"
-path="res://.godot/imported/jump.png-14661729729b5abfb57d50d855687193.ctex"
+uid="uid://cgd8slubtydx8"
+path="res://.godot/imported/tileset.png-c93d9133c310b18a646ff4c02715724c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/entities/frog/jump.png"
-dest_files=["res://.godot/imported/jump.png-14661729729b5abfb57d50d855687193.ctex"]
+source_file="res://data/images/map/tileset.png"
+dest_files=["res://.godot/imported/tileset.png-c93d9133c310b18a646ff4c02715724c.ctex"]
 
 [params]
 
