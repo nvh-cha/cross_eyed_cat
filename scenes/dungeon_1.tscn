@@ -55,7 +55,7 @@ y_sort_enabled = true
 
 [node name="player" parent="." instance=ExtResource("2_a0yhp")]
 z_index = 1
-position = Vector2(-740, -1603)
+position = Vector2(-188, -610)
 
 [node name="bg" type="TileMapLayer" parent="."]
 position = Vector2(1, -1)
